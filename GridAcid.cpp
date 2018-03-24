@@ -12,19 +12,8 @@ second and thus allow acid to spread further.
 The cell made with stone (type B) does not react with acid and hence 
 neither melt nor allow acid to pass through it.
 
- 
-
 There is a third type of a cell that is empty (type C), but has a 
 boundary (all 4 sides) covered with a protective metal.
-
-﻿﻿
-
- 
-
-
-Fig.  A grid of 7 x 8 size as example
-
- 
 
 If all 4 sides of it (type C: empty cell) come into contact with 
 acid at any given time, then in that case boundary of it (all 4 sides)
@@ -45,18 +34,12 @@ or the empty cell(type C).
 Acid is poured continuously until all the grid cells (except stone - type B) 
 melt completely.
 
- 
-
 You have to tell when the empty cell with special protective 
 boundary will get filled with acid and when whole grid will 
 get filled with acid (except the cells made up of stones).
 
- 
-
 It takes 1sec for acid to dissolve special metal cell and after 
 that it can spread to its 4 orthogonal neighbors (Left, Right, Up, Down).
-
- 
 
 Input:
 
@@ -74,17 +57,14 @@ Cell type value is of 3 types:
     -  2:  cell is special empty cell, having a special boundary (type C)
 Note:  There is always one and only one cell of type C (value 2) in a given grid.
 
- 
-
 Output:
-
 Output should contain 2 lines for each test case.
 1st line:   Case#
 2nd line:   Count1  Count2
     Where:
             Count1:  time in seconds when special empty cell (type C) will get filled.
-            Count2:  time in seconds when whole grid will get filled with water (note:  stone cell cannot be filled with acid).
-
+            Count2:  time in seconds when whole grid will get filled with water (note: 
+            stone cell cannot be filled with acid).
 Note:
 1.  Count2 will be -1if all cells of the grid (except stone cells) 
 cannot be dissolved.  Whole grid dissolving term means that all 
@@ -185,6 +165,20 @@ Case #9
 */
 
 /*
+bài này hiểu như sau:
+1 cái lưới, có 3 loại ô: type A,B,C (xem ảnh)
+loại A: acid đi vào sẽ tan chảy trong 1 giây, sau đó acid loang tới ô tiếp theo
+(acid lan tới ô A thì làm tan nó và tiếp tục đi)
+loại B: acid ko thể đi vào
+loại C: khi 4 ô xung quanh nó có acid thì nó mới bị acid lan vào và tan chảy (dissolve)
+
+Hiển nhiên: nếu ô loại C ở rìa mép của lưới hoặc ở cạnh 1 ô loại B thì
+chắc chắn nó ko thể bị tan chảy
+
+Nhiệm vụ của bạn là tìm thời gian ô loại C bị tan chảy (count1) và thời gian để
+toàn bộ lưới bị tan chảy (count2).
+hiển nhiên count1 = -1 thì count2 = -1
+
 Cách làm:
 BFS để cho acid loang hết grid.:
 	Nếu gặp ô nào là METAL thì loang bình thường
@@ -368,7 +362,7 @@ void BFS_grid() {
 }
 
 int main() {
-	freopen("GridAcid.txt", "r", stdin);
+	freopen("GridAcid_input.txt", "r", stdin);
 	cin >> T;
 	for(int tc = 1; tc <= T; tc++) {
 		input();
