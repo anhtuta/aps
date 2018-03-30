@@ -6,6 +6,16 @@ Giống với bài này: http://codesoeasy.weebly.com/home/cleanrbt-cleaning-rob
 Khác ở chỗ: có thêm chướng ngại vật
 
 Sau đây là lời giải SAI của Anhtu
+ý tưởng giải: ta cho robot tìm rác ở vị trí gần nó nhất để nhặt, sau đó
+lại tìm rác nào ở gần nó nhất và nhặt tiếp... nhặt tới khi nào hết
+
+nhận xét: cách trên KHÔNG THỂ là cách đi tối ưu, xem hình vẽ để hiểu rõ hơn
+
+Cách giải đúng: cần tìm tất cả các khoảng cách từ robot đến từng rác, và khoảng
+cách giữa 2 rác với nhau. VD: có 4 rác và 1 robot, vậy cần tìm 10 khoảng cách
+(cần tìm khoảng cách giữa 2 vật bất kỳ). Cách tìm này dùng BFS cho từng điểm rác
+và cho vị trí robot. Sau đó ta dùng quay lui để xác định đường đi tối ưu
+Ý tưởng là vậy, nhưng chưa có time implement!
 */
 
 #include <iostream>
