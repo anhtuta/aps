@@ -1,5 +1,4 @@
-# APS
+﻿# APS
 ## Algorithm Problem Solving (Samsung)
 
-Repository này chứa 1 số bài thuật toán cơ bản trong chương trình dạy APS của các sinh viên STP
-
+This repository has some problems from APS1 program and APS2 program in SVMC. Most of Algorithms are about DFS (using stack), BFS (using queue) and Backtrack.
