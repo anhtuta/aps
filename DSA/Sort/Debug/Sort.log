@@ -1,0 +1,6 @@
+﻿  PracticeSort.cpp
+  Sort.cpp
+  Generating Code...
+Sort.obj : error LNK2005: "int __cdecl getStringLength(char *)" (?getStringLength@@YAHPAD@Z) already defined in PracticeSort.obj
+Sort.obj : error LNK2005: _main already defined in PracticeSort.obj
+D:\Documents\APS (Algorithm Problem Solving)\DSA\Debug\Sort.exe : fatal error LNK1169: one or more multiply defined symbols found
