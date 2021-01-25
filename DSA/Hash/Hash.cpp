@@ -16,7 +16,7 @@ Giả sử cho ds sinh viên, cần lưu lại và tìm kiếm theo username
 using namespace std;
 
 unsigned int myHash(char* name) {
-	unsigned int h = 7;
+	unsigned int h = 5381;
 	int i = 0;
 	int c;
 
